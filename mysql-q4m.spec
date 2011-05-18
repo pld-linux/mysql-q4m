@@ -4,6 +4,7 @@
 # - system boost
 # - check so linking
 # - add -avoid-version to module, install to mysql dir
+# - mention support-files/install-exec-hook.txt contents
 Summary:	Queue for MySQL is a message queue
 Name:		mysql-q4m
 Version:	0.9.5
@@ -68,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README doc
+%doc ChangeLog README doc support-files/install.sql
 %attr(755,root,root) %{_bindir}/q4m-forward
 %attr(755,root,root) %{_libdir}/libqueue_engine.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libqueue_engine.so.0
