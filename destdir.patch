@@ -1,0 +1,12 @@
+--- q4m-0.9.5/Makefile.am	2011-05-19 01:00:32.877553750 +0300
++++ q4m-0.9.5/Makefile.am	2011-05-19 01:02:45.366389710 +0300
+@@ -13,7 +13,8 @@
+          && rm -fr $(bindistdir); }; }
+ 
+ install-exec-hook:
+-	$(INSTALL) $(SUPPORT_BIN) $(bindir)
++	$(INSTALL) -d $(DESTDIR)$(bindir)
++	$(INSTALL) $(SUPPORT_BIN) $(DESTDIR)$(bindir)
+ 	@cat support-files/install-exec-hook.txt
+ 
+ dist-doc:
