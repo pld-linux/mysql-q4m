@@ -35,7 +35,7 @@ fast, flexible.
 %prep
 %setup -qn q4m-%{version} -a1
 %undos Makefile.am
-%patch0 -p1
+%patch -P0 -p1
 ln -s mysql-5.* mysql-src
 
 %build
